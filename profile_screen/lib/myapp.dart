@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:profile_screen/profile_pic.dart';
+import 'package:profile_screen/professional_interests.dart';
 
+import 'package:profile_screen/profile_pic.dart';
+import 'pessoal_interests.dart';
 import 'name_tag.dart';
 
 class MyApp extends StatelessWidget {
@@ -11,60 +13,32 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Column(
-          children: [
-            const ProfilePic(),
-            const NameTag(),
-            const Text(
+          children: const [
+            ProfilePic(),
+            NameTag(),
+            Text(
               '" Amo Artes, Ciências e Esportes. Sou lindo "',
               style: TextStyle(
-                color: Colors.white60,
+                color: Color(0xFF71706f),
                 fontSize: 17,
               ),
             ),
-            Container(
-              width: 390,
-              height: 30,
-              margin: const EdgeInsets.only(top: 35),
-              child: const Text(
-                "Interesses:",
-                style: TextStyle(
-                    color: Colors.orange,
-                    fontSize: 21,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            Container(
-              width: 400,
-              height: 140,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.network(
-                    "https://cdn-icons.flaticon.com/png/512/2377/premium/2377402.png?token=exp=1645211490~hmac=70f83826e013faa89b4dbeff11701fd4",
-                    scale: 6.5,
-                  ),
-                  Image.network(
-                    "https://cdn-icons-png.flaticon.com/512/6307/6307916.png",
-                    scale: 6.5,
-                  ),
-                  Image.network(
-                    "https://cdn-icons-png.flaticon.com/512/6758/6758225.png",
-                    scale: 6.5,
-                  ),
-                ],
-              ),
-            )
+            PessoalInterests(),
+            ProfessionalInterests(),
           ],
         ),
-        floatingActionButton: FloatingActionButton.extended(
+        floatingActionButton: FloatingActionButton(
           onPressed: () => 1 + 1,
-          backgroundColor: Colors.orange,
-          icon: const Icon(Icons.account_balance_wallet),
-          label: const Text("Dar dinheiro"),
+          backgroundColor: const Color(0xFF58ac53),
+          child: const Icon(Icons.favorite),
         ),
+        bottomNavigationBar: BottomAppBar(
+          shape: const CircularNotchedRectangle(),
+          child: Container(height: 35),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       ),
       theme: ThemeData(
-        primaryColor: Colors.blueGrey,
         brightness: Brightness.dark,
       ),
     );

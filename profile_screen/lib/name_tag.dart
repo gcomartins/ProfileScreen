@@ -10,7 +10,7 @@ class NameTag extends StatelessWidget {
       height: 45,
       margin: const EdgeInsets.only(top: 2, bottom: 25),
       decoration: BoxDecoration(
-        color: Colors.orange,
+        color: const Color(0xFF58ac53),
         shape: BoxShape.rectangle,
         borderRadius: BorderRadius.circular(21),
       ),

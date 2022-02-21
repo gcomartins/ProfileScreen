@@ -12,7 +12,7 @@ class ProfilePic extends StatelessWidget {
         margin: const EdgeInsets.only(top: 60.0),
         decoration: BoxDecoration(
           border: Border.all(
-            color: Colors.orange,
+            color: const Color(0xFF58ac53),
             width: 2.5,
           ),
           shape: BoxShape.circle,
