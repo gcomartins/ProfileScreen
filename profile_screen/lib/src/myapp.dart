@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:profile_screen/professional_interests.dart';
+import 'package:profile_screen/src/professional_interests.dart';
 
-import 'package:profile_screen/profile_pic.dart';
+import 'package:profile_screen/src/profile_pic.dart';
 import 'pessoal_interests.dart';
 import 'name_tag.dart';
 

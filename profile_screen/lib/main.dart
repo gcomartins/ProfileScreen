@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'myapp.dart';
+import 'src/myapp.dart';
 
 void main() {
   runApp(const MyApp());
