@@ -24,7 +24,7 @@ class PessoalInterests extends StatelessWidget {
           width: 400,
           height: 150,
           child: ListView(
-            itemExtent: 500,
+            // itemExtent: 500,
             scrollDirection: Axis.horizontal,
             children: [
               Row(
