@@ -19,43 +19,61 @@ class PessoalInterests extends StatelessWidget {
                 fontWeight: FontWeight.bold),
           ),
         ),
-        SizedBox(
+        Container(
+          // color: Colors.white,
           width: 400,
-          height: 250,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+          height: 150,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
+                  SizedBox(
+                    width: 40,
+                  ),
                   Image(
                     image: AssetImage('lib/src/imgs/art.png'),
-                    width: 80,
+                    width: 85,
+                  ),
+                  SizedBox(
+                    width: 40,
                   ),
                   Image(
                     image: AssetImage('lib/src/imgs/science.png'),
-                    width: 80,
+                    width: 85,
+                  ),
+                  SizedBox(
+                    width: 40,
                   ),
                   Image(
                     image: AssetImage('lib/src/imgs/programming.png'),
-                    width: 80,
+                    width: 85,
                   ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
+                  SizedBox(
+                    width: 40,
+                  ),
                   Image(
                     image: AssetImage('lib/src/imgs/sports.png'),
-                    width: 80,
+                    width: 85,
+                  ),
+                  SizedBox(
+                    width: 40,
                   ),
                   Image(
                     image: AssetImage('lib/src/imgs/cinema.png'),
-                    width: 80,
+                    width: 85,
+                  ),
+                  SizedBox(
+                    width: 40,
                   ),
                   Image(
                     image: AssetImage('lib/src/imgs/travelling.png'),
-                    width: 80,
+                    width: 85,
+                  ),
+                  SizedBox(
+                    width: 40,
                   ),
                 ],
               ),
