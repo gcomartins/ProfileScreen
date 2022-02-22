@@ -24,12 +24,36 @@ class PessoalInterests extends StatelessWidget {
           width: 400,
           height: 150,
           child: ListView(
-            // itemExtent: 500,
+            itemExtent: 700,
             scrollDirection: Axis.horizontal,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
+                  Image(
+                    image: AssetImage('lib/src/imgs/art.png'),
+                    width: 85,
+                  ),
+                  Image(
+                    image: AssetImage('lib/src/imgs/science.png'),
+                    width: 85,
+                  ),
+                  Image(
+                    image: AssetImage('lib/src/imgs/programming.png'),
+                    width: 85,
+                  ),
+                  Image(
+                    image: AssetImage('lib/src/imgs/sports.png'),
+                    width: 85,
+                  ),
+                  Image(
+                    image: AssetImage('lib/src/imgs/cinema.png'),
+                    width: 85,
+                  ),
+                  Image(
+                    image: AssetImage('lib/src/imgs/travelling.png'),
+                    width: 85,
+                  ),
                   // GestureDetector(
                   //   onTap: () => ("Clicou em arte!"),
                   //   child: const Padding(
@@ -40,48 +64,6 @@ class PessoalInterests extends StatelessWidget {
                   //     ),
                   //   ),
                   // ),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Image(
-                      image: AssetImage('lib/src/imgs/art.png'),
-                      width: 85,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Image(
-                      image: AssetImage('lib/src/imgs/science.png'),
-                      width: 85,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Image(
-                      image: AssetImage('lib/src/imgs/programming.png'),
-                      width: 85,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Image(
-                      image: AssetImage('lib/src/imgs/sports.png'),
-                      width: 85,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Image(
-                      image: AssetImage('lib/src/imgs/cinema.png'),
-                      width: 85,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Image(
-                      image: AssetImage('lib/src/imgs/travelling.png'),
-                      width: 85,
-                    ),
-                  ),
                 ],
               ),
             ],
