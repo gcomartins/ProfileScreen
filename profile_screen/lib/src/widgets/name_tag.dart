@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class NameTag extends StatelessWidget {
-  const NameTag({Key? key}) : super(key: key);
+class NameTagWidget extends StatelessWidget {
+  const NameTagWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
