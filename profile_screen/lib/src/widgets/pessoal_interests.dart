@@ -12,10 +12,10 @@ class PessoalInterestsWidget extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.04,
           margin:
               EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.04),
-          child: const Text(
+          child: Text(
             "Interesses pessoais:",
             style: TextStyle(
-                color: Color(0xFF45b19a),
+                color: Theme.of(context).textTheme.headline1?.color,
                 fontSize: 21,
                 fontWeight: FontWeight.bold),
           ),

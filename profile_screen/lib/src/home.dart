@@ -12,26 +12,27 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: const [
-          ProfilePicWidget(),
-          NameTagWidget(),
+        children: [
+          const ProfilePicWidget(),
+          const NameTagWidget(),
           Text(
             '" Amo Artes, Ciências e Esportes. Sou lindo "',
             style: TextStyle(
-              color: Color(0xFF71706f),
+              color: Theme.of(context).textTheme.headline1?.color,
               fontSize: 17,
             ),
           ),
-          PessoalInterestsWidget(),
-          ProfessionalInterestsWidget(),
+          const PessoalInterestsWidget(),
+          const ProfessionalInterestsWidget(),
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => 1 + 1,
-        backgroundColor: const Color(0xFF58ac53),
-        child: const Icon(Icons.favorite),
+        child: const Icon(Icons.mode_night),
+        backgroundColor: Theme.of(context).primaryColor,
       ),
       bottomNavigationBar: BottomAppBar(
+        color: Theme.of(context).primaryColor,
         shape: const CircularNotchedRectangle(),
         child: Container(height: 35),
       ),
