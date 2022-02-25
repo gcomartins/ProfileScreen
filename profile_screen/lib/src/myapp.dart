@@ -5,6 +5,7 @@ import 'package:profile_screen/src/widgets/name_tag.dart';
 import 'package:profile_screen/src/widgets/pessoal_interests.dart';
 import 'package:profile_screen/src/widgets/professional_interests.dart';
 import 'package:profile_screen/src/widgets/profile_pic.dart';
+import 'package:profile_screen/src/widgets/text.dart';
 import 'home.dart';
 import '/src/widgets/bottom_app_bar.dart';
 
@@ -20,7 +21,7 @@ class _MyAppLight extends State<MyApp> {
 
   bool isDark = false;
 
-  Icon icone = Icon(Icons.mode_night);
+  Icon icone = const Icon(Icons.mode_night);
 
   @override
   Widget build(BuildContext context) {
@@ -28,18 +29,12 @@ class _MyAppLight extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Column(
-          children: [
-            const ProfilePicWidget(),
-            const NameTagWidget(),
-            Text(
-              '" Amo Artes, Ciências e Esportes. Sou lindo "',
-              style: TextStyle(
-                color: Theme.of(context).textTheme.headline1?.color,
-                fontSize: 17,
-              ),
-            ),
-            const PessoalInterestsWidget(),
-            const ProfessionalInterestsWidget(),
+          children: const [
+            ProfilePicWidget(),
+            NameTagWidget(),
+            TextWidget(),
+            PessoalInterestsWidget(),
+            ProfessionalInterestsWidget(),
           ],
         ),
         floatingActionButton: FloatingActionButton(
