@@ -20,7 +20,10 @@ class _MyAppLight extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(changeThemeMethod: changeTheme),
+      home: Home(
+        changeThemeMethod: changeTheme,
+        iconeButton: icone,
+      ),
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: _themeMode,
