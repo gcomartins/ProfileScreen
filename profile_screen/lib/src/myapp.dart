@@ -20,6 +20,8 @@ class _MyAppLight extends State<MyApp> {
 
   bool isDark = false;
 
+  Icon icone = Icon(Icons.mode_night);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -42,7 +44,7 @@ class _MyAppLight extends State<MyApp> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () => changeTheme(),
-          child: const Icon(Icons.mode_night),
+          child: icone,
           backgroundColor: Theme.of(context).primaryColor,
         ),
         bottomNavigationBar: const BottomAppBarWidget(),
@@ -58,8 +60,10 @@ class _MyAppLight extends State<MyApp> {
     setState(() {
       if (isDark) {
         _themeMode = ThemeMode.light;
+        icone = const Icon(Icons.mode_night);
       } else {
         _themeMode = ThemeMode.dark;
+        icone = const Icon(Icons.wb_sunny);
       }
       isDark = !isDark;
     });
