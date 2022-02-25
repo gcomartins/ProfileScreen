@@ -1,37 +1,67 @@
-// ignore_for_file: use_full_hex_values_for_flutter_colors
-
 import 'package:flutter/material.dart';
+import 'package:profile_screen/src/theme/theme_constants.dart';
+import 'package:profile_screen/src/widgets/bottom_app_bar.dart';
+import 'package:profile_screen/src/widgets/name_tag.dart';
+import 'package:profile_screen/src/widgets/pessoal_interests.dart';
+import 'package:profile_screen/src/widgets/professional_interests.dart';
+import 'package:profile_screen/src/widgets/profile_pic.dart';
 import 'home.dart';
+import '/src/widgets/bottom_app_bar.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppLight();
+}
+
+class _MyAppLight extends State<MyApp> {
+  ThemeMode _themeMode = ThemeMode.light;
+
+  bool isDark = false;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const Home(),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Column(
+          children: [
+            const ProfilePicWidget(),
+            const NameTagWidget(),
+            Text(
+              '" Amo Artes, Ciências e Esportes. Sou lindo "',
+              style: TextStyle(
+                color: Theme.of(context).textTheme.headline1?.color,
+                fontSize: 17,
+              ),
+            ),
+            const PessoalInterestsWidget(),
+            const ProfessionalInterestsWidget(),
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => changeTheme(),
+          child: const Icon(Icons.mode_night),
+          backgroundColor: Theme.of(context).primaryColor,
+        ),
+        bottomNavigationBar: const BottomAppBarWidget(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      ),
       theme: lightTheme,
       darkTheme: darkTheme,
+      themeMode: _themeMode,
     );
   }
+
+  changeTheme() {
+    setState(() {
+      if (isDark) {
+        _themeMode = ThemeMode.light;
+      } else {
+        _themeMode = ThemeMode.dark;
+      }
+      isDark = !isDark;
+    });
+  }
 }
-
-ThemeData lightTheme = ThemeData(
-  primaryColor: const Color(0xFFff8303),
-  scaffoldBackgroundColor: const Color(0xFFffffff),
-  textTheme: const TextTheme(
-    headline1: TextStyle(
-      color: Color(0xFF565554),
-    ),
-  ),
-);
-
-ThemeData darkTheme = ThemeData(
-  primaryColor: const Color(0xFF58ac53),
-  scaffoldBackgroundColor: const Color(0xFF181818),
-  textTheme: const TextTheme(
-    headline1: TextStyle(
-      color: Color(0xDF58ac53),
-    ),
-  ),
-);
