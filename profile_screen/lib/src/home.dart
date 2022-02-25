@@ -6,7 +6,8 @@ import 'package:profile_screen/src/widgets/profile_pic.dart';
 import 'package:profile_screen/src/widgets/name_tag.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  final VoidCallback changeThemeMethod;
+  const Home({required this.changeThemeMethod, Key? key}) : super(key: key);
 
   @override
   State<Home> createState() => _HomeState();
@@ -32,7 +33,7 @@ class _HomeState extends State<Home> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => 1 + 1,
+        onPressed: widget.changeThemeMethod,
         child: const Icon(Icons.mode_night),
         backgroundColor: Theme.of(context).primaryColor,
       ),

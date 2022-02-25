@@ -27,24 +27,7 @@ class _MyAppLight extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Column(
-          children: const [
-            ProfilePicWidget(),
-            NameTagWidget(),
-            TextWidget(),
-            PessoalInterestsWidget(),
-            ProfessionalInterestsWidget(),
-          ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => changeTheme(),
-          child: icone,
-          backgroundColor: Theme.of(context).primaryColor,
-        ),
-        bottomNavigationBar: const BottomAppBarWidget(),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
-      ),
+      home: Home(changeThemeMethod: changeTheme),
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: _themeMode,
