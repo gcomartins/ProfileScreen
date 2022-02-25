@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
           const ProfilePicWidget(),
           const NameTagWidget(),
           Text(
-            '" Amo Artes, Ciências e Esportes. Sou lindo "',
+            '" Amo Artes, Ciências e Esportes. "',
             style: TextStyle(
               color: Theme.of(context).textTheme.headline1?.color,
               fontSize: 17,
