@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:profile_screen/src/theme/theme_constants.dart';
-import 'package:profile_screen/src/widgets/bottom_app_bar.dart';
-import 'package:profile_screen/src/widgets/name_tag.dart';
-import 'package:profile_screen/src/widgets/pessoal_interests.dart';
-import 'package:profile_screen/src/widgets/professional_interests.dart';
-import 'package:profile_screen/src/widgets/profile_pic.dart';
-import 'package:profile_screen/src/widgets/text.dart';
 import 'home.dart';
-import '/src/widgets/bottom_app_bar.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
